@@ -7,20 +7,18 @@ import Indicator from './components/Indicator';
 import Sunrise from './components/Sunrise';
 import Sunset from './components/Sunset';
 import BasicTable from './components/BasicTable';
+import WeatherChart from './components/WeatherChart';
+import ControlPanel from './components/ControlPanel';
 
 
 function App() {
   const [count, setCount] = useState(0)
 
+   {/* JSX */}
+
   return (
 	
     <Grid container spacing={5}>
-	      <Grid xs={12} sm={4} md={3} lg={2}>1</Grid>
-	      <Grid xs={6} sm={4} md={3} lg={2}>2</Grid>
-	      <Grid xs={6} sm={4} md={3} lg={2}>3</Grid>
-	      <Grid xs={12} sm={4} md={3} lg={2}>4</Grid>
-	      <Grid xs={6} sm={4} md={6} lg={2}>5</Grid>
-	      <Grid xs={6} sm={4} md={6} lg={2}>6</Grid>
 		  <Grid xs={6} sm={4} md={3} lg={4}>
 	        <Sunrise></Sunrise>
 	      </Grid> 
@@ -30,9 +28,15 @@ function App() {
 		  <Grid xs={6} sm={4} md={3} lg={4}>
 	        <Sunset></Sunset>
 	      </Grid>  
-		  <Grid xs={12} md={6} lg={8} >
+		  <Grid xs={12} md={6} lg={12} >
 	       	<BasicTable />
-	      </Grid>     
+	      </Grid> 
+		  <Grid xs={12} lg={3}>
+             <ControlPanel />
+         </Grid>
+		  <Grid xs={12} lg={9}>
+             <WeatherChart></WeatherChart>
+         </Grid>
 	</Grid>
 	
   )
